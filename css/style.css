@@ -883,3 +883,41 @@ input[type="radio"].visually-hidden {
 	font-weight: 300;
 	color: #464646;
 }
+
+
+
+
+
+
+
+
+
+/* Brands ===================================== */
+
+.brands {
+	margin-bottom: 80px;
+}
+
+.brands-list {
+	display: flex;
+	justify-content: space-between;
+
+	margin: 0;
+	padding: 0;
+
+	list-style: none;
+}
+
+.brands-list a {
+	opacity: 0.2;
+	filter: grayscale(1);
+
+	transition-property: opacity, filter;
+	transition-duration: 0.2s, 0.1s;
+	transition-timing-function: linear;
+}
+
+.brands-list a:hover {
+	opacity: 1;
+	filter: grayscale(0);
+}
