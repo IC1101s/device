@@ -112,6 +112,39 @@ input[type="radio"].visually-hidden {
 	transition: 0.05s opacity linear;
 }
 
+.btn-amenities {
+	padding: 10px 0;
+	width: 160px;
+	text-align: center;
+
+	background-image: 
+	linear-gradient(to bottom, #e5e5e5 40%, #f0c52e 40%,
+	#f0c52e 60%, #e5e5e5 60%);
+}
+
+.btn-amenities:hover,
+.btn-amenities:focus {
+	background-image: 
+	linear-gradient(#f0c52e 0%, #f0c52e 100%);
+}
+
+.btn-amenities:active span {
+	opacity: 0.3;
+	transition: 0.05s opacity linear;
+}
+
+.amenities-list .current .btn-amenities {
+	width: 110px;
+	padding: 10px 143px 10px 25px;
+	
+	color: #f7e184;
+
+	background-image: none;
+	text-align: none;
+
+	background-color: #000000;
+}
+
 /* Header ===================================== */
 
 .header {
@@ -311,6 +344,7 @@ input[type="radio"].visually-hidden {
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-between;
+	align-items: center;
 
 	margin-top: 36px;
 	padding-left: 60px;
@@ -481,7 +515,7 @@ input[type="radio"].visually-hidden {
 	position: relative;
 	z-index: 1;
 	
-	margin-bottom: 85px;
+	margin-bottom: 95px;
 	min-height: 500px;
 
 	background-image: 
@@ -645,7 +679,7 @@ input[type="radio"].visually-hidden {
 	font-size: 15px;
 	line-height: 30px;
 	font-weight: 300;
-	color: #000000;
+	color: #464646;
 }
 
 .table-slider td {
@@ -686,7 +720,7 @@ input[type="radio"].visually-hidden {
 /* Assortment ===================================== */
 
 .assortment {
-	margin-bottom: 60px;
+	margin-bottom: 155px;
 }
 
 .assortment-inner {
@@ -744,4 +778,108 @@ input[type="radio"].visually-hidden {
 	line-height: 24px;
 	font-weight: 800;
 	color: #000000;
+}
+
+
+
+
+
+
+
+
+
+/* Amenities ===================================== */ 
+
+.amenities {
+	padding-bottom: 150px;
+	margin-bottom: 105px;
+
+	background-image: 
+	linear-gradient(#ffffff 7%, #e5e5e5 7%);
+}
+
+.amenities-inner {
+	position: relative;
+
+	display: flex;
+	align-items: flex-start;
+}
+
+.amenities-list {
+	width: 300px;
+
+	position: relative;
+
+	margin: 0;
+	padding: 0;
+	margin-right: 100px;
+
+	list-style: none;
+}
+
+.amenities-list::after {
+	content: "";
+	display: block;
+
+	position: absolute;
+	top: -80px;
+	left: 277px;
+	z-index: 1;
+
+	width: 7px;
+	height: 319px;
+
+	background-color: #000000;
+}
+
+.amenities-list .amenities-tab {
+	margin-bottom: 25px;
+}
+
+.amenities-content {
+	margin: 0;
+	padding: 0;
+
+	list-style: none;
+}
+
+.amenities-content::after {
+	content: "";
+	display: block;
+
+	position: absolute;
+	top: 0;
+	right: 65px;
+	z-index: 1;
+
+	width: 136px;
+	height: 164px;
+
+	background-image: url("../img/amenities/delivery.svg");
+	background-repeat: no-repeat;
+	background-position: 0 0;
+}
+
+.amenities-content li:nth-child(2), 
+.amenities-content li:nth-child(3) {
+	display: none;
+}
+
+.amenities-content h3 {
+	margin-top: 0;
+	margin-bottom: 35px;
+
+	font-size: 47px;
+	line-height: 48px;
+	font-weight: 800;
+	color: #000000;
+}
+
+.amenities-content p {
+	margin: 0;
+
+	font-size: 15px;
+	line-height: 30px;
+	font-weight: 300;
+	color: #464646;
 }
