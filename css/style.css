@@ -588,8 +588,11 @@ input[type="radio"].visually-hidden {
 }
 
 .slider {
+	position: relative;
+
 	margin: 0;
 	padding: 0;
+
 	list-style: none;
 }
 
@@ -623,6 +626,37 @@ input[type="radio"].visually-hidden {
 	margin-left: 30px;
 }
 
+.slider li::before {
+	position: absolute;
+	z-index: -1;
+
+	font-size: 179px;
+	line-height: 179px;
+	font-weight: 800;
+	color: #ffffff;
+}
+
+.slider li:nth-child(1)::before {
+	content: "01";
+
+	top: -5px;
+	right: -10px;
+}
+
+.slider li:nth-child(2)::before {
+	content: "02";
+
+	right: -5px;
+	top: -5px;
+}
+
+.slider li:nth-child(3)::before {
+	content: "03";
+
+	right: -5px;
+	top: -5px;
+}
+
 .content-wrapper {
 	position: relative;
 	margin-top: 85px;
@@ -641,28 +675,6 @@ input[type="radio"].visually-hidden {
 	height: 7px;
 
 	background-color: #ffffff;
-}
-
-.slider-number {
-	position: absolute;
-	top: -95px;
-	right: -40px;
-	z-index: -1;
-
-	font-size: 179px;
-	line-height: 179px;
-	font-weight: 800;
-	color: #ffffff;
-}
-
-.slider-2 .slider-number {
-	right: -75px;
-	top: -92px;
-}
-
-.slider-3 .slider-number {
-	right: -15px;
-	top: -92px;
 }
 
 .content-wrapper b {
@@ -895,7 +907,7 @@ input[type="radio"].visually-hidden {
 /* Brands ===================================== */
 
 .brands {
-	margin-bottom: 80px;
+	margin-bottom: 160px;
 }
 
 .brands-list {
@@ -917,7 +929,13 @@ input[type="radio"].visually-hidden {
 	transition-timing-function: linear;
 }
 
-.brands-list a:hover {
+.brands-list a:hover,
+.brands-list a:focus {
 	opacity: 1;
 	filter: grayscale(0);
+}
+
+.brands-list img {
+	width: 260px;
+	height: 100px;
 }
