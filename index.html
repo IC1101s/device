@@ -10,34 +10,27 @@
 		<!-- Header -->
 		<header class="header">
 			<h1 class="header-logo"><a href="index.html">Device</a></h1>
-			<div class="header-top">
+			<div class="header-interface-inner">
 				<form class="header-search" action="https://echo.htmlacademy.ru" method="post">
-					<label for="search-field"><span class="visually-hidden">Поиск:</span></label>
+					<label class="visually-hidden" for="search-field">Поиск:</label>
 					<input class="header-search-text" type="text" name="search" id="search-field"
 						placeholder="Поиск по сайту" autocomplete="off">
-					<button class="btn btn-search" type="submit"><span>Найти</span></button>			
+					<button class="btn-search" type="submit"><span>Найти</span></button>			
 				</form>
 				<div class="header-interface">
 					<p class="header-input">
 						<a href="#input">Войти</a>
 					</p>
-					<p class="header-compare">
-						<a href="#compare">Сравнить</a>
-					</p>
-					<p class="header-cart">
-						<a href="#cart">Корзина</a>
+					<p class="header-compare-and-cart">
+						<a class="compare" href="#compare">Сравнить</a>
+						<a class="cart" href="#cart">Корзина</a>
 					</p>
 				</div>
 			</div>
-			<nav class="navigation navigation-header">
-				<ul class="wrapper-navigation-header">
-					<li class="navigation-header-box">
+			<nav class="header-navigation">
+				<ul class="catalog-nav">
+					<li class="navigation-catalog-box">
 						<a class="menu-caption" href="#catalogue">Каталог товаров</a>
-						<ul class="service-nav">
-							<li><a href="#delivery">Доставка</a></li>
-							<li><a href="#guarantee">Гарантия</a></li>
-							<li><a href="#contacts">Контакты</a></li>
-						</ul>
 						<div class="big-menu">
 							<ul class="header-item">
 								<li><a href="#virtual-reality">Виртуальная реальность</a></li>
@@ -51,15 +44,21 @@
 							<ul class="header-item">
 								<li><a href="#quadcopters">Квадрокоптеры</a></li>
 							</ul>
-						</div>
+						</div>		
 					</li>
+				</ul>
+				<ul class="service-nav">
+					<li><a href="#delivery">Доставка</a></li>
+					<li><a href="#guarantee">Гарантия</a></li>
+					<li><a href="#contacts">Контакты</a></li>
 				</ul>
 			</nav>
 		</header>
 	</div>
-		<main>
-			<!-- Sliders -->
+
+	<main>
 		<div class="container">
+			<!-- Sliders -->
 			<section class="sliders">
 				<h2 class="visually-hidden">Слайдер</h2>
 				<div class="sliders-wrapper">
@@ -263,18 +262,27 @@
 
 		<section class="brands">
 			<div class="container">
+				<h2 class="visually-hidden">Бренды</h2>
 				<ul class="brands-list">
 					<li>
-						<a href="#dji"><img src="img/brands/logo-1.png" alt="DJI" width="260" height="100"></a>
+						<a href="#dji">
+							<img src="img/brands/logo-1.png" alt="DJI" width="260" height="100">
+						</a>
 					</li>
 					<li>
-						<a href="#sp-gadgets"><img src="img/brands/logo-2.png" alt="SpGadgets" width="260" height="100"></a>
+						<a href="#sp-gadgets">
+							<img src="img/brands/logo-2.png" alt="SpGadgets" width="260" height="100">
+						</a>
 					</li>
 					<li>
-						<a href="#go-pro"><img src="img/brands/logo-3.png" alt="GoPro" width="260" height="100"></a>
+						<a href="#go-pro">
+							<img src="img/brands/logo-3.png" alt="GoPro" width="260" height="100">
+						</a>
 					</li>
 					<li>
-						<a href="#vive"><img src="img/brands/logo-4.png" alt="Vive" width="260" height="100"></a>
+						<a href="#vive">
+							<img src="img/brands/logo-4.png" alt="Vive" width="260" height="100">
+						</a>
 					</li>
 				</ul>
 			</div>
