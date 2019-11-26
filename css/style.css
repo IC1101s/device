@@ -56,7 +56,7 @@ input[type="radio"].visually-hidden {
 	font-size: 18px;
 	line-height: 24px;
 	font-weight: 800;
-	letter-spacing: 3.5px;
+	letter-spacing: 4px;
 	color: #000000;
 
 	border: none;
@@ -124,7 +124,10 @@ input[type="radio"].visually-hidden {
 
 .btn-detailed:active span {
 	opacity: 0.3;
-	transition: 0.05s opacity linear;
+
+	transition-duration: 0.05s;
+	transition-property: opacity;
+	transition-timing-function: linear;
 }
 
 .btn-amenities {
@@ -145,7 +148,10 @@ input[type="radio"].visually-hidden {
 
 .btn-amenities:active span {
 	opacity: 0.3;
-	transition: 0.05s opacity linear;
+
+	transition-duration: 0.05s;
+	transition-property: opacity;
+	transition-timing-function: linear;
 }
 
 .amenities-list .current .btn-amenities {
@@ -561,7 +567,7 @@ input[type="radio"].visually-hidden {
 	min-height: 500px;
 
 	background-image: 
-	linear-gradient(#f7e296 0%, #f7e296 24%, #ffffff 24%);
+	linear-gradient(#f7e296 0px, #f7e296 120px, #ffffff 120px);
 }
 
 .sliders-wrapper {
@@ -775,7 +781,7 @@ input[type="radio"].visually-hidden {
 /* Assortment ===================================== */
 
 .assortment {
-	margin-bottom: 155px;
+	margin-bottom: 125px;
 }
 
 .assortment-inner {
@@ -788,11 +794,17 @@ input[type="radio"].visually-hidden {
 .assortment-inner {
 	display: flex;
 	flex-wrap: wrap;
-	justify-content: space-between;
 }
 
 .assortment-inner li {
-	max-width: 160px;
+	width: 160px;
+
+	margin-right: 40px;
+	margin-bottom: 30px;
+}
+
+.assortment-inner li:last-child {
+	margin-right: 0;
 }
 
 .assortment-inner .image-wrapper {
@@ -824,6 +836,7 @@ input[type="radio"].visually-hidden {
 .assortment-inner a:active img,
 .assortment-inner a:active b { 
 	opacity: 0.3;
+	
 	transition-property: opacity;
 	transition-duration: 0.05s;
 	transition-timing-function: linear;
@@ -967,17 +980,73 @@ input[type="radio"].visually-hidden {
 
 .brands-list a {
 	opacity: 0.2;
-	filter: grayscale(1);
 
-	transition-property: opacity, filter;
-	transition-duration: 0.2s, 0.1s;
-	transition-timing-function: linear;
+	transition-property: opacity;
+	transition-duration: 0.2s;
+	transition-timing-function: ease;
 }
 
 .brands-list a:hover,
 .brands-list a:focus {
 	opacity: 1;
-	filter: grayscale(0);
+}
+
+.brands-list a {
+	position: relative;
+}
+
+.brands-list li:nth-child(1) a::before {
+	content: "";
+
+	position: absolute;
+	z-index: 10;
+	left: 0;
+
+	width: 260px; 
+	height: 100px;
+
+	background-image: url("../img/brands/logo-1.png");
+	background-repeat: no-repeat;
+	background-position: 0 0;
+}
+
+.brands-list li a::before {
+	content: "";
+
+	position: absolute;
+	z-index: 10;
+	left: 0;
+
+	width: 260px; 
+	height: 100px;
+}
+
+.brands-list li:nth-child(1) a::before {
+	background-image: url("../img/brands/logo-1.png");
+	background-repeat: no-repeat;
+	background-position: 0 0;
+}
+
+.brands-list li:nth-child(2) a::before {
+	background-image: url("../img/brands/logo-2.png");
+	background-repeat: no-repeat;
+	background-position: 0 0;
+}
+
+.brands-list li:nth-child(3) a::before {
+	background-image: url("../img/brands/logo-3.png");
+	background-repeat: no-repeat;
+	background-position: 0 0;
+}
+
+.brands-list li:nth-child(4) a::before {
+	background-image: url("../img/brands/logo-4.png");
+	background-repeat: no-repeat;
+	background-position: 0 0;
+}
+
+.brands-list li a:hover::before {
+	z-index: -1;
 }
 
 .brands-list img {
