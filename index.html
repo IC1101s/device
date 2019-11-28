@@ -4,7 +4,7 @@
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<title>Device</title>
-	<link rel="stylesheet" href="css/style.main.css">
+	<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 	<div class="container">
@@ -428,5 +428,32 @@
 			</div>
 		</div>
 	</footer>
+
+	<!-- Modal-Message -->
+	<section class="modal modal-message">
+		<h2 class="visually-hidden">Напишите нам</h2>
+		<form action="https://echo.htmlacademy.ru" method="get">
+			<div class="inner-input">
+				<p class="message-name">
+					<label for="name-field">Ваше имя:</label><br>
+					<input type="text" name="name" id="name-field" placeholder="Имя Фамилия" 
+						autocomplete="off">
+				</p>
+				<p class="message-mail">
+					<label for="mail-field">Ваш e-mail:</label><br>
+					<input type="text" name="mail" id="mail-field" placeholder="email@example.com" 
+						autocomplete="off">
+				</p>
+			</div>
+			<p class="message-text">
+				<label for="message-field">Текст письма:</label><br>
+				<textarea name="message" id="message-field" placeholder="В свободной форме"></textarea>
+			</p>
+			<p class="message-submit">
+				<button class="btn btn-submit" type="submit"><span>Отправить</span></button>
+			</p>
+		</form>
+		<button class="modal-close" type="button"><span class="visually-hidden">Закрыть</span></button>
+	</section>
 </body>
 </html>
