@@ -1668,7 +1668,6 @@ input[type="radio"].visually-hidden {
 /* Modal ===================================== */
 
 .modal {
-	display: none;
 	position: fixed;
 	z-index: 100;
 
@@ -1681,6 +1680,7 @@ input[type="radio"].visually-hidden {
 
 .modal-overlay {
 	display: none;
+
 	position: fixed;
 	top: 0;
 	left: 0;
@@ -1692,10 +1692,15 @@ input[type="radio"].visually-hidden {
 	background-color: transparent;
 }
 
+.modal-overlay-visible {
+	display: block;
+}
+
 /* Modal-Message ===================================== */
 
 .modal-message {
-	/*display: none;*/
+	display: none;
+
 	width: 760px;
 	padding: 95px 100px 80px;
 
@@ -1720,13 +1725,13 @@ input[type="radio"].visually-hidden {
 	margin: 0;
 }
 
-.modal-message label {
+.inner-input label {
 	font-size: 18px;
 	line-height: 24px;
 	font-weight: 800;
 }
 
-.modal-message input,
+.inner-input input,
 .message-text textarea {
 	width: 360px;
 	padding: 15px 20px;
@@ -1756,12 +1761,12 @@ input[type="radio"].visually-hidden {
 	overflow: auto;
 }
 
-.modal-message input:hover,
+.inner-input input:hover,
 .message-text textarea:hover {
 	background-color: #eaeaea;
 }
 
-.modal-message input:focus,
+.inner-input input:focus,
 .message-text textarea:focus {
 	box-shadow: inset 0 0 0 3px #f7e296;
 	background-color: #ffffff;
@@ -1769,7 +1774,7 @@ input[type="radio"].visually-hidden {
 	cursor: text;
 }
 
-.modal-message input:disabled,
+.inner-input input:disabled,
 .message-text textarea:disabled  {
 	background-color: #f6dada;
 }
@@ -1812,7 +1817,7 @@ input[type="radio"].visually-hidden {
 	height: 3px;
 
 	transition-property: transform;
-	transition-duration: 0.3s;
+	transition-duration: 0.2s;
 	transition-timing-function: linear;
 
 	background-color: #ffffff;
@@ -1845,10 +1850,15 @@ input[type="radio"].visually-hidden {
 	opacity: 0.3;
 }
 
+.modal-message-visible {
+	display: block;	
+}
+
 /* Modal-Map ===================================== */
 
 .modal-map {
-	/*display: none;*/
+	display: none;
+
 	width: 994px;
 	height: 559px;
 
@@ -1856,6 +1866,10 @@ input[type="radio"].visually-hidden {
 	top: 50%;
 
 	transform: translate(-50%, -50%);
+}
+
+.modal-map iframe {
+	border: none;
 }
 
 .map-images {
@@ -1873,4 +1887,8 @@ input[type="radio"].visually-hidden {
 .map-images img {
 	width: 994px;
 	height: 559px;
+}
+
+.modal-map-visible {
+	display: block;
 }
