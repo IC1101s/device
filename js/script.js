@@ -1,36 +1,68 @@
 let modalOverlay = document.querySelector('.modal-overlay');
 
-let modalMessage = document.querySelector('.modal-message');
-let messageBtn = document.querySelector('.btn-contacts');
-let closeMessage = document.querySelector('.close-message');
-let name = modalMessage.querySelector('[id=name-field]');
+// Modal-Map ===================================================
 
 let modalMap = document.querySelector('.modal-map');
 let mapBtn = document.querySelector('.js-map');
-let closeMap = document.querySelector('.close-map');
+let modalCloseMap = modalMap.querySelector('.modal-close');
+
+mapBtn.addEventListener('click', function (evt) {
+	evt.preventDefault();
+	modalMap.classList.add('modal-map-visible');
+	modalOverlay.classList.add('modal-overlay-visible');
+	modalCloseMap.focus();
+});
+
+modalCloseMap.addEventListener('click', function () {
+	modalMap.classList.remove('modal-map-visible');
+	modalOverlay.classList.remove('modal-overlay-visible');
+});
+
+modalOverlay.addEventListener('click', function () {
+	modalMap.classList.remove('modal-map-visible');
+	modalOverlay.classList.remove('modal-overlay-visible');
+});
+
+window.addEventListener('keydown', function (evt) {
+	if (evt.keyCode === 27) {
+		if (modalMap.classList.contains('modal-map-visible')) {
+			evt.preventDefault();
+			modalMap.classList.remove('modal-map-visible');
+			modalOverlay.classList.remove('modal-overlay-visible');
+		}
+	}
+});
 
 // Modal-Message ===================================================
 
-messageBtn.onclick = function () {
-	modalMessage.classList.toggle('modal-message-visible');
+let modalMessage = document.querySelector('.modal-message');
+let messageBtn = document.querySelector('.btn-contacts');
+let modalCloseMessage = modalMessage.querySelector('.modal-close');
+let name = modalMessage.querySelector('[name=name]');
+
+messageBtn.addEventListener('click', function (evt) {
+	evt.preventDefault();
+	modalMessage.classList.add('modal-message-visible');
 	modalOverlay.classList.add('modal-overlay-visible');
 	name.focus();
-};
+});
 
-closeMessage.onclick = function () {
+modalCloseMessage.addEventListener('click', function () {
 	modalMessage.classList.remove('modal-message-visible');
 	modalOverlay.classList.remove('modal-overlay-visible');
-};
+});
 
-// Modal-Map ===================================================
-
-mapBtn.onclick = function () {
-	modalMap.classList.toggle('modal-map-visible');
-	modalOverlay.classList.add('modal-overlay-visible');
-	closeMap.focus();
-};
-
-closeMap.onclick = function () {
-	modalMap.classList.remove('modal-map-visible');
+modalOverlay.addEventListener('click', function () {
+	modalMessage.classList.remove('modal-message-visible');
 	modalOverlay.classList.remove('modal-overlay-visible');
-};
+});
+
+window.addEventListener('keydown', function (evt) {
+	if (evt.keyCode === 27) {
+		if (modalMessage.classList.contains('modal-message-visible')) {
+			evt.preventDefault();
+			modalMessage.classList.remove('modal-message-visible');
+			modalOverlay.classList.remove('modal-overlay-visible');
+		}
+	}
+});
