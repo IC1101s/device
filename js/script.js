@@ -66,3 +66,44 @@ window.addEventListener('keydown', function (evt) {
 		}
 	}
 });
+
+// Big-Menu ===================================================
+
+var menuCaption = document.querySelector('.menu-caption');
+var bigMenu = document.querySelector('.big-menu');
+
+menuCaption.addEventListener('mouseover', function () {
+	bigMenu.classList.add('big-menu-visible'); 
+});
+
+menuCaption.addEventListener('mouseout', function () {
+	bigMenu.classList.remove('big-menu-visible'); 
+});
+
+bigMenu.addEventListener('mouseover', function () {
+	bigMenu.classList.add('big-menu-visible'); 
+});
+
+bigMenu.addEventListener('mouseout', function () {
+	bigMenu.classList.remove('big-menu-visible'); 
+});
+
+menuCaption.addEventListener('focus', function () {
+	bigMenu.classList.add('big-menu-visible'); 
+});
+
+
+// Amenities ===================================================
+
+// var amenitiesTab = document.querySelectorAll('.amenities-tab');
+// var amenitiesBtn = document.querySelectorAll('.btn-amenities');
+
+// var clickFuncrion = function (amenitieBtn, amenitieTab) {
+// 	amenitieBtn.addEventListener('click', function () {
+// 		amenitieTab.classList.add('current');
+// 	});
+// }
+
+// for (var i = 0; i < amenitiesTab.length; i++) {
+// 	clickFuncrion(amenitiesTab[i], amenitiesBtn[i]);
+// }
