@@ -582,8 +582,12 @@ input[type="radio"].visually-hidden {
 	transition-timing-function: linear;
 }
 
-.menu-caption:hover ~ .navigation-catalog-box .big-menu,
+/*.menu-caption:hover ~ .navigation-catalog-box .big-menu,
 .menu-caption:focus ~ .navigation-catalog-box .big-menu {
+	display: flex;
+}*/
+
+.big-menu-visible {
 	display: flex;
 }
 
